@@ -1,5 +1,5 @@
 // equivalent to require from node.js
-require.cache = [];
+require.cache = {};
 
 function require(url) {
 	
