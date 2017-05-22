@@ -1,0 +1,11 @@
+{
+  "name": "u-require",
+  "version": "1.0.0",
+  "description": "micro require implementation for the browser",
+  "main": "src/uRequire.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Franck FREIBURGER",
+  "license": "MIT"
+}
