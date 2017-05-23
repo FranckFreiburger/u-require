@@ -28,14 +28,13 @@ require.extensions = {
 
 function require(url) {
 	
-	var filenamePos = url.lastIndexOf('/')+1;
-	var extDotPos = url.indexOf('.', filenamePos);
-
-	var extension = extDotPos !== -1 ? url.substr(extDotPos) : '.js';
-	
 	var exports = require.cache[url];
 	
 	if ( !exports ) {
+		
+		var filenamePos = url.lastIndexOf('/')+1;
+		var extDotPos = url.indexOf('.', filenamePos);
+		var extension = extDotPos !== -1 ? url.substr(extDotPos) : '.js';
 		
 		function childModuleRequire(childUrl) {
 
