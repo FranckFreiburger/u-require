@@ -38,7 +38,8 @@ function require(url) {
 		
 		function childModuleRequire(childUrl) {
 
-			return require((childUrl.substr(0,2) === './' || childUrl.substr(0,3) === '../' ? url.substr(0, filenamePos) : '') + childUrl);
+			var isRelative = childUrl.substr(0,2) === './' || childUrl.substr(0,3) === '../';
+			return require((isRelative ? url.substr(0, filenamePos) : '') + childUrl);
 		}
 
 		exports = {};
