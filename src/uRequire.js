@@ -43,9 +43,9 @@ function require(url) {
 		}
 
 		exports = {};
-		var module = { id: url, uri: url, exports: exports, require:childModuleRequire };
+		var module = { id: url, exports: exports, require:childModuleRequire };
 		require.extensions[extension](module, url);
-		require.cache[url] = exports = module.exports;
+		require.cache[module.id] = exports = module.exports;
 	}
 	
 	return exports;
