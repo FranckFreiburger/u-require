@@ -42,6 +42,8 @@ function require(url) {
 			return require((isRelative ? url.substr(0, filenamePos) : '') + childUrl);
 		}
 
+		childModuleRequire.cache = require.cache;
+
 		exports = {};
 		var module = { id: url, exports: exports, require:childModuleRequire };
 		require.extensions[extension](module, url);
