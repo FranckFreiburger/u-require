@@ -1,6 +1,6 @@
 {
   "name": "u-require",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "micro require implementation for the browser",
   "main": "src/uRequire.js",
   "scripts": {
